@@ -1,0 +1,46 @@
+<header>
+  <h2>Contact View</h2>
+</header>
+<form
+  [formGroup]="form"
+  (ngSubmit)="onSubmit(form.value)">
+  <ul>
+    <li><img id="pic"/></li>
+    <li>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" formControlName="name">
+      <div *ngIf="form.controls.name.errors?.pattern" class="error">
+        Name has invalid characters
+      </div>
+    </li>
+    <li>
+      <label for="phone">Phone</label>
+      <input type="text" name="phone" id="phone" formControlName="phone">
+      <div *ngIf="form.controls.phone.errors?.pattern" class="error">
+        Phone has invalid characters
+      </div>
+    </li>
+    <li>
+      <label for="email">Email</label>
+      <input type="text" name="email" id="email" formControlName="email">
+      <div *ngIf="form.controls.email.errors?.pattern" class="error">
+        Email has invalid characters
+      </div>
+    </li>
+    <li>
+      <label for="birthday">Birthday</label>
+      <input type="text" name="birthday" id="birthday" formControlName="birthday">
+      <div *ngIf="form.controls.birthday.errors?.pattern" class="error">
+        Birthday has invalid characters
+      </div>
+    </li>
+    <li>
+      <label for="avatar">Avatar</label>
+      <input type="text" name="avatar" id="avatar" formControlName="avatar">
+      <div *ngIf="form.controls.avatar.errors?.pattern" class="error">
+        Avatar URL is invalid
+      </div>
+    </li>
+    </ul>
+  <button type="submit" [disabled]="!form.valid">Save</button>
+</form>

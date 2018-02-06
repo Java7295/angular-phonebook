@@ -1,0 +1,51 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+  height: 200px;
+  border: 2px solid;
+  background-color: #29394b;
+  padding: 10px;
+  color: #bdc2c5;
+}
+h2 {
+  font-size: 14px;
+  flex: 1;
+}
+.tools {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.pic {
+	cursor: pointer;
+}
+.delete {
+  display: block;
+  background-color: #ec4342;
+  padding: 4px;
+  font-size: 10px;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.details {
+  display: block;
+  background-color: #37ad79;
+  padding: 4px;
+  font-size: 10px;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.add {
+  display: block;
+  background-color: #37ad79;
+  padding: 4px;
+  font-size: 10px;
+  border-radius: 4px;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}

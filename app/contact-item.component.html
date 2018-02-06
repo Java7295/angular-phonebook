@@ -1,0 +1,15 @@
+<h2>{{ contactItem.name }}</h2>
+
+<div *ngIf="contactItem.name.indexOf('Add New') === -1">
+	<img class="pic" (click)="onDetails()" [attr.src]="contactItem.avatar" width="140" />
+	<div class="tools">
+  	<a class="details" (click)="onDetails()">View</a>
+	</div>
+</div>
+
+<div *ngIf="contactItem.name.indexOf('Add New') !== -1">
+	<a routerLink="/add"><img class="pic" [attr.src]="contactItem.avatar" width="140" /></a>
+	<div class="tools">
+		<a class="add" routerLink="/add">Add New Contact</a>
+	</div>
+</div>

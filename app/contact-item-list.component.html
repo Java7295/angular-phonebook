@@ -1,0 +1,11 @@
+<section>
+  <contact-item
+    *ngFor="let contactItem of contactItems"
+    [contactItem]="contactItem"
+    (details)="onContactItemDetails($event)"
+    (add)="onContactItemAdd($event)"
+    (delete)="onContactItemDelete($event)"
+    (edit)="onContactItemEdit($event)"
+  >
+  </contact-item>
+</section>
